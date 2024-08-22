@@ -37,23 +37,6 @@ header h1 {
     gap: 10px;
 }
 
-.online-status {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: #00ff00; /* Green color */
-    border-radius: 50%;
-    animation: blink 1s infinite; /* Blinking animation */
-}
-
-@keyframes blink {
-    0%, 50%, 100% {
-        opacity: 1;
-    }
-    25%, 75% {
-        opacity: 0;
-    }
-}
 
 .container {
     display: flex;
