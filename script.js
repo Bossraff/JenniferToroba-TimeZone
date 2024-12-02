@@ -6,43 +6,41 @@ function updateTime() {
         timeZoneName: 'short',
         hour12: true // Ensure 12-hour format with AM/PM
     };
-
     const dateOptions = {
         weekday: 'long',
         month: 'long',
         day: 'numeric'
     };
-
-    // Philippines (Manila)
-    const phDate = new Intl.DateTimeFormat('en-PH', { ...dateOptions, timeZone: 'Asia/Manila' }).format(new Date());
-    const phTime = new Intl.DateTimeFormat('en-PH', { ...timeOptions, timeZone: 'Asia/Manila' }).format(new Date());
-    document.getElementById('ph-date').innerText = phDate;
-    document.getElementById('ph-time').innerText = phTime;
-
+    // Australia (Sydney)
+    const australiaDate = new Intl.DateTimeFormat('en-AU', { ...dateOptions, timeZone: 'Australia/Sydney' }).format(new Date());
+    const australiaTime = new Intl.DateTimeFormat('en-AU', { ...timeOptions, timeZone: 'Australia/Sydney' }).format(new Date());
+    document.getElementById('australia-date').innerText = australiaDate;
+    document.getElementById('australia-time').innerText = australiaTime;
     // US (New York)
     const usDate = new Intl.DateTimeFormat('en-US', { ...dateOptions, timeZone: 'America/New_York' }).format(new Date());
     const usTime = new Intl.DateTimeFormat('en-US', { ...timeOptions, timeZone: 'America/New_York' }).format(new Date());
     document.getElementById('us-date').innerText = usDate;
     document.getElementById('us-time').innerText = usTime;
-
-    // Ontario (Canada)
-    const ontarioDate = new Intl.DateTimeFormat('en-CA', { ...dateOptions, timeZone: 'America/Toronto' }).format(new Date());
-    const ontarioTime = new Intl.DateTimeFormat('en-CA', { ...timeOptions, timeZone: 'America/Toronto' }).format(new Date());
-    document.getElementById('ontario-date').innerText = ontarioDate;
-    document.getElementById('ontario-time').innerText = ontarioTime;
-
-    // Tokyo (Japan)
-    const tokyoDate = new Intl.DateTimeFormat('en-JP', { ...dateOptions, timeZone: 'Asia/Tokyo' }).format(new Date());
-    const tokyoTime = new Intl.DateTimeFormat('en-JP', { ...timeOptions, timeZone: 'Asia/Tokyo' }).format(new Date());
-    document.getElementById('tokyo-date').innerText = tokyoDate;
-    document.getElementById('tokyo-time').innerText = tokyoTime;
-
-    // Los Angeles (USA)
-    const laDate = new Intl.DateTimeFormat('en-US', { ...dateOptions, timeZone: 'America/Los_Angeles' }).format(new Date());
-    const laTime = new Intl.DateTimeFormat('en-US', { ...timeOptions, timeZone: 'America/Los_Angeles' }).format(new Date());
-    document.getElementById('la-date').innerText = laDate;
-    document.getElementById('la-time').innerText = laTime;
+    // UK (London)
+    const ukDate = new Intl.DateTimeFormat('en-GB', { ...dateOptions, timeZone: 'Europe/London' }).format(new Date());
+    const ukTime = new Intl.DateTimeFormat('en-GB', { ...timeOptions, timeZone: 'Europe/London' }).format(new Date());
+    document.getElementById('uk-date').innerText = ukDate;
+    document.getElementById('uk-time').innerText = ukTime;
+    // Berlin (Germany)
+    const berlinDate = new Intl.DateTimeFormat('de-DE', { ...dateOptions, timeZone: 'Europe/Berlin' }).format(new Date());
+    const berlinTime = new Intl.DateTimeFormat('de-DE', { ...timeOptions, timeZone: 'Europe/Berlin' }).format(new Date());
+    document.getElementById('berlin-date').innerText = berlinDate;
+    document.getElementById('berlin-time').innerText = berlinTime;
+    // Philippines (Manila)
+    const phDate = new Intl.DateTimeFormat('en-PH', { ...dateOptions, timeZone: 'Asia/Manila' }).format(new Date());
+    const phTime = new Intl.DateTimeFormat('en-PH', { ...timeOptions, timeZone: 'Asia/Manila' }).format(new Date());
+    document.getElementById('ph-date').innerText = phDate;
+    document.getElementById('ph-time').innerText = phTime;
+    // EST (Eastern Standard Time)
+    const estDate = new Intl.DateTimeFormat('en-US', { ...dateOptions, timeZone: 'America/New_York' }).format(new Date());
+    const estTime = new Intl.DateTimeFormat('en-US', { ...timeOptions, timeZone: 'America/New_York' }).format(new Date());
+    document.getElementById('est-date').innerText = estDate;
+    document.getElementById('est-time').innerText = estTime;
 }
-
 setInterval(updateTime, 1000); // Update every second
 updateTime(); // Initial call
